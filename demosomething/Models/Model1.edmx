@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CrawlModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="MSSV" />
+          </Key>
+          <Property Name="MSSV" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Crawl.dbo.Student_Profile' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Student_Profile">
+          <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DOB" Type="nvarchar" MaxLength="255" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+          <Property Name="ID Card" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateOfIssue" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlaceOfIssue" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentPhone" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentEmail" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentJob" Type="nvarchar" MaxLength="255" />
+          <Property Name="ParentWorkPlace" Type="nvarchar" MaxLength="255" />
+          <Property Name="Campus" Type="nvarchar" MaxLength="255" />
+          <Property Name="MSSV" Type="nvarchar" MaxLength="255" />
+          <Property Name="OldRollNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="MemberCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="EnrollDate" Type="nvarchar" MaxLength="255" />
+          <Property Name="Mode" Type="nvarchar" MaxLength="255" />
+          <Property Name="Status" Type="nvarchar" MaxLength="255" />
+          <Property Name="CurrentTerm" Type="nvarchar" MaxLength="255" />
+          <Property Name="Major" Type="nvarchar" MaxLength="255" />
+          <Property Name="Curriculum" Type="nvarchar" MaxLength="255" />
+          <Property Name="CapstoneProject" Type="nvarchar" MaxLength="255" />
+          <Property Name="TermPaid" Type="nvarchar" MaxLength="255" />
+          <Property Name="ExtensionDate" Type="nvarchar" MaxLength="255" />
+          <Property Name="AccountBalance" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nganh_cu" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_Chuyen_nganh" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_Cong_nhan_SVCQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ngay_cong_nhan_SVCQ" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_Cong_nhan_SV_du_bi" Type="nvarchar" MaxLength="255" />
+          <Property Name="Han_7_nam" Type="nvarchar" MaxLength="255" />
+          <Property Name="Lop_chinh" Type="nvarchar" MaxLength="255" />
+          <Property Name="Loai_tai_chinh" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_Thoi_hoc" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_Chuyen_co_so" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_BL_Exchange_Ky_luat" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_Cong_nhan_TN" Type="nvarchar" MaxLength="255" />
+          <Property Name="QD_Rejoin" Type="nvarchar" MaxLength="255" />
+          <Property Name="TT_Den" Type="nvarchar" MaxLength="255" />
+          <Property Name="Note" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Crawl.dbo.Subject_Mark' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Subject_Mark">
+          <Property Name="MSSV" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubjectCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubjectName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Semester" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="EndDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="AvgMark" Type="nvarchar" MaxLength="50" />
+        </EntityType>-->
+        <EntityContainer Name="CrawlModelStoreContainer">
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CrawlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="MSSV" />
+          </Key>
+          <Property Name="MSSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="CrawlEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Students" EntityType="Self.Student" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CrawlModelStoreContainer" CdmEntityContainer="CrawlEntities">
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="CrawlModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="MSSV" ColumnName="MSSV" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+@{
+    foreach (demosomething.Models.Student i in ViewBag.abc)
+    {
+        <span>@i.Name</span><br/>
+    }
+}
